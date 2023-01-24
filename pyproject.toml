@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "figures-long-covid-vaccinations-paper"
+version = "0.1.0"
+description = ""
+authors = ["Marc Wiedermann"]
+readme = "README.md"
+packages = [{include = "figures_long_covid_vaccinations_paper"}]
+
+[tool.poetry.dependencies]
+python = "~3.10"
+jupyter = "^1.0.0"
+pandas = "^1.5.3"
+simplejson = "^3.18.1"
+requests = "^2.28.2"
+dulwich = "^0.21.2"
+matplotlib = "^3.6.3"
+scipy = "^1.10.0"
+statsmodels = "^0.13.5"
+pyarrow = "^10.0.1"
+openpyxl = "^3.0.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
