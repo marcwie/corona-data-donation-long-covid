@@ -7,7 +7,17 @@ import pandas as pd
 Path("data/raw").mkdir(parents=True, exist_ok=True)
 
 def main():
+    """
+    Load all raw input data.
 
+    Specifically this includes:
+    - Vaccination dates
+    - Test results and dates
+    - Vital data
+    - User data
+
+    All data is stored under data/raw/ for later preprocessing.    
+    """
     vacc = vaccinations()
     tests = pcr_tests()
     metadata = pd.merge(vacc, tests, on='user_id')
