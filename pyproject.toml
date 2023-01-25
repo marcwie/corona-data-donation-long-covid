@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Marc Wiedermann"]
 readme = "README.md"
-packages = [{include = "figures_long_covid_vaccinations_paper"}]
+packages = [{include = "long_covid"}]
 
 [tool.poetry.dependencies]
 python = "~3.10"
@@ -18,6 +18,8 @@ scipy = "^1.10.0"
 statsmodels = "^0.13.5"
 pyarrow = "^10.0.1"
 openpyxl = "^3.0.10"
+python-dotenv = "^0.21.1"
+psycopg2-binary = "^2.9.5"
 
 
 [build-system]
