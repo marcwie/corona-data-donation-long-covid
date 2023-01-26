@@ -3,3 +3,4 @@ backup
 data
 .env
 __pycache__
+.python-version
