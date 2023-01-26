@@ -4,7 +4,7 @@ from pathlib import Path
 import pandas as pd
 
 
-Path("data/raw").mkdir(parents=True, exist_ok=True)
+Path("data/01_raw").mkdir(parents=True, exist_ok=True)
 
 def main():
     """
@@ -25,11 +25,11 @@ def main():
     vitals = load_from_db.get_vitals(metadata.user_id.unique())
     users = load_from_db.get_user_data(metadata.user_id.unique())
 
-    vacc.to_feather("data/raw/vaccinations.feather")
-    tests.to_feather("data/raw/tests.feather")
+    vacc.to_feather("data/01_raw/vaccinations.feather")
+    tests.to_feather("data/01_raw/tests.feather")
     
-    vitals.to_feather('data/raw/vitals.feather')
-    users.to_feather('data/raw/users.feather')
+    vitals.to_feather('data/01_raw/vitals.feather')
+    users.to_feather('data/01_raw/users.feather')
 
 if __name__ == '__main__':
     main()
