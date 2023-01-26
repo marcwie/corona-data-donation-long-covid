@@ -1,5 +1,5 @@
 from long_covid import load_from_db
-from datenspende.surveydataIO import vaccinations, pcr_tests
+from long_covid.surveydataIO import vaccinations, pcr_tests
 from pathlib import Path
 import pandas as pd
 
@@ -18,8 +18,8 @@ def main():
 
     All data is stored under data/raw/ for later preprocessing.    
     """
-    vacc = vaccinations()
-    tests = pcr_tests()
+    vacc = vaccinations(max_created_at=1649023200000)
+    tests = pcr_tests(max_created_at=1649023200000)
     metadata = pd.merge(vacc, tests, on='user_id')
 
     vitals = load_from_db.get_vitals(metadata.user_id.unique())
