@@ -16,3 +16,8 @@ compute:
 pipeline: download preprocess compute
 
 setup: install download
+
+output:
+	sh scripts/execute_notebooks.sh
+
+.PHONY: output
