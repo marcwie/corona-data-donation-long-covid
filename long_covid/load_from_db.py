@@ -95,6 +95,8 @@ def get_vitals(user_ids, max_date="2022-04-03"):
         vitaldata.user_id IN {user_ids}
     AND
         vitaldata.type IN (9, 65, 43)
+    AND 
+        vitaldata.source IN (6, 3, 2)
     AND
         vitaldata.date <= '{max_date}'
     """
