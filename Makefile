@@ -13,7 +13,7 @@ preprocess:
 compute:
 	poetry run python long_covid/compute.py
 
-pipeline: download preprocess compute
+pipeline: download preprocess compute output
 
 setup: install download
 
