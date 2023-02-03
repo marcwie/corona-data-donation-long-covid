@@ -34,10 +34,20 @@ def normalize(df, by=['vitalid', 'date', 'deviceid']):
     return df #.drop(columns='daily_mean') 
 
 
+def drop_devides_with_low_numbers(df):
+
+    print('Dropping some devices...')
+    invalid = df.deviceid.isin([19, 46, 48])
+    df = df[~invalid]
+
+    return df
+
+
 def preprocess_vital_data(input_file):
 
     df = pd.read_feather(input_file)
 
+    df = drop_devides_with_low_numbers(df)
     df = drop_apple_sleep(df)
     df = normalize(df)
 
