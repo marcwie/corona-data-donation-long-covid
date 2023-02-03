@@ -95,8 +95,6 @@ def get_vitals(user_ids, max_date="2022-04-03"):
         vitaldata.user_id IN {user_ids}
     AND
         vitaldata.type IN (9, 65, 43)
-    AND 
-        vitaldata.source IN (6, 3, 2)
     AND
         vitaldata.date <= '{max_date}'
     """
@@ -125,3 +123,19 @@ def get_user_data(user_ids):
     users.salutation = users.salutation.fillna(30.0)
 
     return users
+
+
+def get_all_valid_datenspende_user():
+    
+    query = """SELECT DISTINCT user_id FROM datenspende.vitaldata"""
+    unique_users_vitals = run_query(query)
+
+    query = """SELECT * FROM datenspende.users WHERE user_id IN {0}""".format(tuple(unique_users_vitals.user_id.values))
+    all_user = run_query(query)
+    
+    all_user = all_user.drop(columns=['source', 'creation_timestamp', 'height', 'weight', 'plz']).dropna()
+    all_user['age'] = np.floor((2022 + 4 / 12) - all_user['birth_date'] + 2.5)
+    
+    all_user.reset_index(inplace=True, drop=True)
+    
+    return all_user

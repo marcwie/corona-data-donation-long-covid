@@ -31,5 +31,8 @@ def main():
     vitals.to_feather('data/01_raw/vitals.feather')
     users.to_feather('data/01_raw/users.feather')
 
+    all_user = load_from_db.get_all_valid_datenspende_user()
+    all_user.to_feather('data/01_raw/all_datenspende_users.feather')
+
 if __name__ == '__main__':
     main()
