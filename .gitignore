@@ -1,6 +1,7 @@
 .ipynb_checkpoints
 backup
-data
+data/*
+!data/00_external/
 .env
 __pycache__
 .python-version
