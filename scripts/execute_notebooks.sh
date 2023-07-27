@@ -7,6 +7,9 @@ to_execute=(
     '1.06-plot_positive_pcr_tests_per_month.ipynb'
     '1.07-plot_time_between_vaccination_and_infection.ipynb'
     '1.08-plot_comparison_age_groups_datenspende_and_overall_population.ipynb'
+    '1.09-plot_example_of_computing_anomalies.ipynb'
+    '1.10-plot-qq-plots.ipynb'
+    '1.11-plot-average-trajectories-as-boxplots.ipynb'
 )
 
 cd notebooks
