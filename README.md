@@ -1,3 +1,7 @@
+# Premise
+
+Contains all scripts and notebooks to reproduce the figures in [Wiedermann et al., (2023)](https://academic.oup.com/pnasnexus/article/2/7/pgad223/7225910).
+
 # Installation
 
 The package requires [poetry](https://python-poetry.org/). Make sure to have it installed and run `make install` after cloning this repository to install all dependencies.
@@ -24,3 +28,9 @@ You can run the entire analysis pipeline using `make pipeline` which executes th
 4. `make output` which executes all `jupyter`-notebooks in the `notebooks` folder that create figures for the final paper. Each notebook creates one specific (set of) figure(s). See the content of `notebooks` for details. 
 
 Afterwards all figures that are necessary to reproduce the paper should be places in `output` and all corresponding input and processed data can be found in `data`. 
+
+# External data
+
+The package relies on some external that ships with this repository. All such data is found in `data/00_external/`. This folder holds one file `statistic_id1365_bevoelkerung-deutschlands-nach-relevanten-altersgruppen-2020.xlsx`. It contains the age distribution of the German population as of December 2020 and was downloaded from `https://de.statista.com/statistik/daten/studie/1365/umfrage/bevoelkerung-deutschlands-nach-altersgruppen/`. 
+
+If one now opens the aforementioned website and downloads the data again one is provided with a newer estimate from December 2022 so that the old file shipped with this repository is no longer officially available. For the sake of reproducibility with the paper we refrain from updating the file to the new version and stick with the estimates from December 2020. 
