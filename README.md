@@ -12,6 +12,33 @@ This package analyzes the positive effects of vaccinations against COVID-19 for 
 
 The package requires [poetry](https://python-poetry.org/). Make sure to have it installed and run `make install` after cloning this repository to install all dependencies.
 
+# Repository structure
+
+.
+├── Makefile                                                                                       # setup, download data and run analysis 
+├── README.md                                                                                      # README file as displayed on github
+├── data                                                                                           #
+│   └── 00_external                                                                                # required external input data
+│       └── statistic_id1365_bevoelkerung-deutschlands-nach-relevanten-altersgruppen-2020.xlsx     #
+├── long_covid                                                                                     # package source code to be used in notebooks
+│   ├── __init__.py                                                                                #
+│   ├── colors.py                                                                                  # some custom colors
+│   ├── compute.py                                                                                 # compute results
+│   ├── load_from_db.py                                                                            # helper functions for connecting to a PostgreSQL database
+│   ├── load_raw_data.py                                                                           # load wearable data from database
+│   ├── preprocess.py                                                                              # data cleaning and preprocessing
+│   ├── styling.py                                                                                 # custom styling for figures
+│   └── surveydataIO.py                                                                            # load survey data from database
+├── notebooks                                                                                      # notebooks for analysis
+│   ├── 1.01-plot_example_timeseries.ipynb                                                         #
+│   ├── 1.02-plot_average_trajectories.ipynb                                                       #
+│   ├── ...                                                                                        #
+├── output                                                                                         # store output
+├── poetry.lock                                                                                    # poetry configurations
+├── pyproject.toml                                                                                 #
+└── scripts                                                                                        # bash scripts
+    └── execute_notebooks.sh                                                                       # run all jupyter notebooks from the command line
+
 # Setup
 
 After gaining data access you will receive instructions for setting up a VPN. You can then interact with the database by creating a file named `.env` in the root of the repository using the following template and filling in your credentials. Do not add this file to your git repository.
