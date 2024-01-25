@@ -14,7 +14,7 @@ The package requires [poetry](https://python-poetry.org/). Make sure to have it 
 
 # Setup
 
-After gaining data access you can interact with the database by creating a file named `.env` in the root of the repository using the following template and filling in your credentials. Do not add this file to your git repository.
+After gaining data access you will receive instructions for setting up a VPN. You can then interact with the database by creating a file named `.env` in the root of the repository using the following template and filling in your credentials. Do not add this file to your git repository.
 
 ```
 HOST = 
