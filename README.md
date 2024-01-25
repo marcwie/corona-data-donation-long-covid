@@ -1,6 +1,12 @@
 # Premise
 
-Contains all scripts and notebooks to reproduce the figures in [Wiedermann et al., (2023)](https://academic.oup.com/pnasnexus/article/2/7/pgad223/7225910).
+Contains all software and notebooks to reproduce the figures in [Wiedermann et al., (2023)](https://academic.oup.com/pnasnexus/article/2/7/pgad223/7225910). Unfortunately, the input data is not yet publicly available. Please see the *data availability statement* in the aforementioned paper for details.
+
+# Purpose
+
+Parse wearable sensors and survey data collected within the Corona Data Donation project (*Corona Datenspende*, click [here](https://corona-datenspende.github.io/en/) for more information). The Corona Data Donation Project is one of the largest citizen science initiatives worldwide. From 2020 to 2022, more than 120,000 German residents donated continuous daily measurements of resting heart rate, physical activity and sleep timing for the advancement of public health research. These data streams were collected passively through a dedicated smartphone app, seamlessly connecting with participants’ fitness trackers and smartwatches. Additionally, participants actively engaged in regular surveys, sharing insights into their health and well-being during the COVID-19 pandemic. 
+
+This package analyzes the positive effects of vaccinations against COVID-19 for mitigating long-term effects of an infection with SARS-CoV-2. For this purpose, it parses daily resting hearte rate, step count and sleep duration measured from wearable devices (e.g, Apple Watch, Fitbit, Garmin) and survey data on COVID-19 test results, test dates and vaccination status.  
 
 # Installation
 
@@ -8,7 +14,7 @@ The package requires [poetry](https://python-poetry.org/). Make sure to have it 
 
 # Setup
 
-In order to interact with the database create a file named `.env` in the root of the repository using the following template and filling in your credentials. Do not add this file to git.
+After gaining data access you can interact with the database by creating a file named `.env` in the root of the repository using the following template and filling in your credentials. Do not add this file to your git repository.
 
 ```
 HOST = 
