@@ -1,6 +1,6 @@
 # Premise
 
-Contains all software and notebooks to reproduce the figures in [Wiedermann et al., (2023)](https://academic.oup.com/pnasnexus/article/2/7/pgad223/7225910). Unfortunately, the input data is not yet publicly available. Please see the *data availability statement* in the aforementioned paper for details.
+Contains all software and notebooks to reproduce the figures in [Wiedermann et al., (2023)](https://academic.oup.com/pnasnexus/article/2/7/pgad223/7225910). Unfortunately, the input data is not yet publicly available. Please see the *data availability statement* in the aforementioned paper for details. Package structure is based on an earlier version of my personal [data science template](https://github.com/marcwie/datascience-template).
 
 # Purpose
 
